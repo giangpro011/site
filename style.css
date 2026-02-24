@@ -102,17 +102,18 @@ body {
 }
 
 .cast-card {
+    height: 200px;
     background: #111;
+    display: flex;
+    align-items: flex-end;
     padding: 15px;
     border-bottom: 3px solid var(--blood-red);
     transition: 0.3s;
 }
 
-.cast-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
+.cast-card:hover {
+    transform: translateY(-5px);
+    background: #1a1a1a;
 }
 
 /* Footer & Buttons */
