@@ -102,20 +102,38 @@ body {
 }
 
 .cast-card {
-    height: 200px;
+    position: relative;
+    height: 350px; /* Tăng chiều cao để hiện rõ chân dung */
     background: #111;
-    display: flex;
-    align-items: flex-end;
-    padding: 15px;
-    border-bottom: 3px solid var(--blood-red);
-    transition: 0.3s;
+    border-radius: 10px;
+    overflow: hidden; /* Cắt phần ảnh thừa */
+    border-bottom: 4px solid var(--blood-red);
+    transition: all 0.4s ease;
 }
 
-.cast-card:hover {
-    transform: translateY(-5px);
-    background: #1a1a1a;
+.cast-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giúp ảnh không bị méo */
+    filter: grayscale(40%) brightness(0.8);
+    transition: 0.4s;
 }
 
+.cast-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    text-align: center;
+}
+.cast-info span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: white;
+}
 /* Footer & Buttons */
 .scroll-btn {
     display: inline-block;
@@ -131,7 +149,11 @@ body {
 
 .scroll-btn:hover {
     background: var(--blood-red);
-    box-shadow: 0 0 20px var(--blood-red);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(229, 9, 20, 0.6);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-color: #ff4d4d;
+    color: white;
 }
 
 footer {
